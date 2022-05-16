@@ -1,0 +1,37 @@
+.app-header {
+  align-items: center;
+  background-color: $clr1;
+  color: $clr2;
+  font-weight: 600;
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      align-items: center;
+      gap: 30px;
+
+      span,
+      a {
+        color: whitesmoke;
+        transition: 0.15s;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: none;
+          color: rgb(255, 255, 163);
+        }
+      }
+
+      .active {
+        color: rgb(255, 255, 78);
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.details {
+  display: flex;
+  flex-direction: column;
+
+  h1,
+  h4 {
+    margin: 8px 0px;
+  }
+
+  p {
+    margin: 6px 0px;
+  }
+
+  img {
+    width: 400px;
+    border-radius: 20px;
+    margin: 10px 0px;
+  }
+
+  a {
+    color: blue;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .play-link {
+    width: 130px;
+    text-align: center;
+    color: $clr2;
+    background-color: blue;
+    padding: 6px;
+    height: 25px;
+    line-height: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.15s;
+
+    &:hover {
+      background-color: rgb(80, 80, 255);
+    }
+  }
+}

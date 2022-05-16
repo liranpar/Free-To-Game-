@@ -1,0 +1,12 @@
+// Basics
+@import "basic/layout";
+@import "basic/setup";
+
+//cmps
+@import "cmps/app-header";
+@import "cmps/game-preview";
+@import "cmps/game-list";
+@import "cmps/game-filter";
+
+//Pages
+@import "pages/details";

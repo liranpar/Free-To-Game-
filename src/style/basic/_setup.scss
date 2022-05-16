@@ -1,0 +1,21 @@
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  transition: 0.25s;
+
+  &:hover {
+    background-color: cornflowerblue;
+  }
+}
+
+$clr1: #2d9779;
+$clr2: whitesmoke;

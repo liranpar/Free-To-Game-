@@ -1,0 +1,33 @@
+.game-preview {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 30px;
+
+  text-decoration: none;
+  opacity: 1;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  img {
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  span {
+    text-align: center;
+    color: black;
+    background-color: rgb(134, 204, 207);
+    border-radius: 0px 0px 15px 15px;
+    font-weight: 600;
+  }
+
+  .game-name {
+    font-size: 22px;
+  }
+  .game-genre {
+    font-size: 15px;
+  }
+}
