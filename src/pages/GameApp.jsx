@@ -27,7 +27,6 @@ class _GameApp extends Component {
       });
       this.setState({ categories });
       this.setState({ firstRender: false });
-      console.log(gamesForDisplay);
     }
 
     this.setState({ gamesForDisplay });
