@@ -56,11 +56,12 @@ function _filterGames(games, filterBy) {
     filteredGames = filteredGames.filter((g) => g.genre === filterBy.category);
   }
   // if (filterBy.sort) {
-  //   console.log(filterBy.sort);
-  //   filteredGames = filteredGames.sort(
-  //     (a, b) => a.title.toUpperCase() - b.title.toUpperCase()
-  //   );
+  //   const sortBy = filterBy.sort;
+  //   filteredGames.sort((a, b) => {
+  //     console.log(a[sortBy]);
+  //     return a[sortBy] - b[sortBy];
+  //   });
   // }
-  // console.log(filteredGames);
+
   return filteredGames;
 }
