@@ -4,16 +4,21 @@ import axios from "axios";
 export const gameServise = {
   query,
   getById,
+  updateGame,
 };
 
 const STORAGE_KEY = "game_db";
 
 async function getById(gameId) {
-  const games = await query();
-  const game = games.find((g) => g.id === +gameId);
+  const game = storageService.getById(STORAGE_KEY, gameId);
   return new Promise((resolve) => {
     resolve(game);
   });
+}
+
+async function updateGame(game) {
+  storageService.save(STORAGE_KEY, game);
+  console.log(game);
 }
 
 async function query(filterBy = null) {
@@ -36,6 +41,9 @@ async function query(filterBy = null) {
       .request(options)
       .then((response) => {
         games = response.data;
+        games.forEach((game) => {
+          game.isFavorite = false;
+        });
         storageService.store(STORAGE_KEY, games);
         if (filterBy) games = _filterGames(games, filterBy);
         return games;

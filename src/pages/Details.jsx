@@ -18,11 +18,16 @@ export class Details extends Component {
     this.setState({ game });
   }
 
+  async toggleFavorites(game) {
+    game.isFavorite = !game.isFavorite;
+    await gameServise.updateGame(game);
+    this.setState({ game });
+  }
+
   render() {
     const { game } = this.state;
 
     if (!game) return <div className="main-layout">Loading..</div>;
-    const timeForDisplay = utilService.dateForDisplay(game.createdAt);
 
     return (
       <section className="details main-layout">
@@ -33,10 +38,13 @@ export class Details extends Component {
         <p>{game.short_description}</p>
         <img src={game.thumbnail} alt="" />
         <h1
-          className="play-link"
+          className="game-btn"
           onClick={() => window.open(game.game_url, "_blank")}
         >
-          Play game!
+          Play Game!
+        </h1>
+        <h1 className="game-btn" onClick={() => this.toggleFavorites(game)}>
+          {game.isFavorite ? `Remove From Favorites` : `Add to favorites`}
         </h1>
       </section>
     );
