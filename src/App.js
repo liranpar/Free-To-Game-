@@ -2,6 +2,7 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { About } from "./pages/About";
 import { AppHeader } from "./cmps/AppHeader";
 import { GameApp } from "./pages/GameApp";
+import { Favorites } from "./pages/Favorites";
 import { Details } from "./pages/Details";
 import AppFooter from "./cmps/AppFooter";
 import styles from "./style/styles.scss";
@@ -15,6 +16,7 @@ function App() {
           <AppHeader />
           <Switch>
             <Route exact component={About} path="/about" />
+            <Route exact component={Favorites} path="/favorites" />
             <Route exact component={Details} path="/game/:gameId" />
             <Route exact component={GameApp} path="/" />
           </Switch>

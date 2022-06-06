@@ -18,7 +18,6 @@ async function getById(gameId) {
 
 async function updateGame(game) {
   storageService.save(STORAGE_KEY, game);
-  console.log(game);
 }
 
 async function query(filterBy = null) {
@@ -63,6 +62,11 @@ function _filterGames(games, filterBy) {
   if (filterBy.category) {
     filteredGames = filteredGames.filter((g) => g.genre === filterBy.category);
   }
+
+  if (filterBy.favorites) {
+    filteredGames = filteredGames.filter((g) => g.isFavorite);
+  }
+
   // if (filterBy.sort) {
   //   const sortBy = filterBy.sort;
   //   filteredGames.sort((a, b) => {

@@ -19,9 +19,6 @@ function save(key, value) {
 
 function _update(key, value) {
   const data = JSON.parse(localStorage[key]);
-
-  console.log(data);
-
   store(
     key,
     data.map((val) => (val.id === +value.id ? value : val))

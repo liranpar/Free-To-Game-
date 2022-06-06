@@ -16,8 +16,9 @@ function _AppHeader() {
           <NavLink to="/statistics">Statistics</NavLink> */}
 
           <NavLink exact to="/">
-            Game List
+            All Games
           </NavLink>
+          <NavLink to="/favorites">My Favorites</NavLink>
           <NavLink to="/about">About</NavLink>
         </nav>
       </div>

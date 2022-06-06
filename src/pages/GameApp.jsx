@@ -8,7 +8,6 @@ class _GameApp extends Component {
   state = {
     gamesForDisplay: null,
     filterBy: null,
-    newGame: "",
     categories: null,
     firstRender: true,
   };
@@ -31,17 +30,6 @@ class _GameApp extends Component {
 
     this.setState({ gamesForDisplay });
   }
-
-  addNewGame = async (ev) => {
-    ev.preventDefault();
-    const { newGame } = this.state;
-    if (!newGame) return;
-
-    const game = { text: newGame };
-    this.setState({ newGame: "" });
-    await gameServise.saveGame(game);
-    this.loadGames();
-  };
 
   handleChange = ({ target }) => {
     const field = target.name;
